@@ -51,7 +51,7 @@
 		>
 
 			<%
-			String creatorUserName = "<a href=\"" + rowURL.toString() +"\">" + user2.getFullName() + "</a>";
+			String creatorUserName = "<a href=\"" + rowURL.toString() +"\">" + HtmlUtil.escape(user2.getFullName())  + "</a>";
 			%>
 
 			<div class="lfr-user-portrait">
