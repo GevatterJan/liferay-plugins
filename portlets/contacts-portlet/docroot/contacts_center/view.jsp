@@ -217,7 +217,7 @@ portletURL.setWindowState(WindowState.NORMAL);
 									<%
 									Entry entry = (Entry)curContact;
 
-									String fullName = entry.getFullName();
+									String fullName = HtmlUtil.escape(entry.getFullName());
 
 									String curLastNameAnchor = LanguageUtil.get(pageContext, "no-last-name");
 

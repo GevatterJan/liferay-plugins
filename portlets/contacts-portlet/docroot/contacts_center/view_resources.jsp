@@ -75,7 +75,7 @@ boolean portalUser = ParamUtil.getBoolean(request, "portalUser");
 						contactsToolbarChildren.push(
 							{
 								handler: function(event) {
-									var confirmMessage = '<%= UnicodeLanguageUtil.format(pageContext, "are-you-sure-you-want-to-delete-x-from-your-contacts", entry.getFullName()) %>';
+									var confirmMessage = '<%= UnicodeLanguageUtil.format(pageContext, "are-you-sure-you-want-to-delete-x-from-your-contacts", HtmlUtil.escape(entry.getFullName())) %>';
 
 									if (confirm(confirmMessage)) {
 										A.io.request(

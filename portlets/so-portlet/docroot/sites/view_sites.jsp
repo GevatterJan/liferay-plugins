@@ -149,7 +149,7 @@ else {
 										<portlet:param name="struts_action" value="/sites_admin/post_membership_request" />
 										<portlet:param name="redirect" value="<%= currentURL %>" />
 										<portlet:param name="groupId" value="<%= String.valueOf(group.getGroupId()) %>" />
-										<portlet:param name="comments" value='<%= LanguageUtil.format(pageContext, "x-wishes-to-join-x", new String[] {user.getFullName(), group.getDescriptiveName(locale)}) %>' />
+										<portlet:param name="comments" value='<%= LanguageUtil.format(pageContext, "x-wishes-to-join-x", new String[] {HtmlUtil.escape(user.getFullName()), HtmlUtil.escape(group.getDescriptiveName(locale))}) %>' />
 									</liferay-portlet:actionURL>
 
 									<a class="request-site" href="<%= membershipRequestURL %>"><liferay-ui:message key="request-membership" /></a>

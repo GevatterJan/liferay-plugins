@@ -35,13 +35,13 @@ long entryId = ParamUtil.getLong(request, "entryId");
 		<div class="lfr-detail-info">
 			<c:if test="<%= showIcon %>">
 				<div class="lfr-contact-thumb">
-					<img alt="<%= entry.getFullName() %>" src='<%= themeDisplay.getPathImage() + "/user_male_portrait?img_id=0&t=" %>' />
+					<img alt="<%= HtmlUtil.escape(entry.getFullName()) %>" src='<%= themeDisplay.getPathImage() + "/user_male_portrait?img_id=0&t=" %>' />
 				</div>
 			</c:if>
 
 			<div class="<%= showIcon ? StringPool.BLANK : "no-icon" %> lfr-contact-info">
 				<div class="lfr-contact-name">
-					<%= entry.getFullName() %>
+					<%= HtmlUtil.escape(entry.getFullName()) %>
 				</div>
 
 				<div class="lfr-contact-extra">

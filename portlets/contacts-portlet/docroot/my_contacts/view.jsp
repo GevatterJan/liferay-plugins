@@ -48,7 +48,7 @@ Group group = themeDisplay.getScopeGroup();
 		<c:choose>
 			<c:when test="<%= users.isEmpty() %>">
 				<div class="portlet-msg-info">
-					<liferay-ui:message arguments="<%= group.getDescriptiveName(locale) %>" key="x-has-no-contacts" />
+					<liferay-ui:message arguments="<%= HtmlUtil.escape(group.getDescriptiveName(locale)) %>" key="x-has-no-contacts" />
 				</div>
 			</c:when>
 			<c:otherwise>
